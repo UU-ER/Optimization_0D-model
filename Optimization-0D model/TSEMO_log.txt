@@ -1,0 +1,159 @@
+
+ TSEMO log file created on 17-Jan-2024 
+
+ This file shows the initial specifications of TSEMO and logs the output.
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ License information 
+
+ BSD 2-Clause License 
+
+ Copyright (c) 2017, Eric Bradford, Artur M. Schweidtmann and Alexei Lapkin
+ All rights reserved. 
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met: 
+
+ *Redistributions of source code must retain the above copyright notice, this   
+  list of conditions and the following disclaimer. 
+
+ *Redistributions in binary form must reproduce the above copyright notice,   
+  this list of conditions and the following disclaimer in the documentation   
+  and/or other materials provided with the distribution. 
+
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Problem specifications 
+
+ Function used:   @(X)eval_0D(X,c,m,file_name,file_optimization,ppm_CO2) 
+
+ Number of inputs:   3
+ Number of outputs:  3 
+
+ Lower bounds of decision variables:
+      x1      x2      x3
+303.0000  0.0100253.0000
+ 
+ Upper bounds of decision variables:
+      x1      x2      x3
+373.0000  0.0800293.0000
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Algorithm options 
+
+ Maximum number of function evaluations:  40
+ Sample batch size:                       1
+ Number of algorithm iterations:          40 
+
+ Genetic algorithm population size:        100
+ Genetic algorithm number of generations:  100 
+
+                                               f1      f2      f3
+ Number of spectral sampling points:         4000    4000    4000
+ Type of matern function:                       1       1       1
+ Direct evaluations per input dimension:      200     200     200
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Initial data set 
+
+ Number of initial data points:  15 
+
+ Initial input data matrix:
+      x1      x2      x3
+342.7144  0.0158281.4000
+347.5873  0.0321255.1424
+309.3172  0.0683268.3304
+351.0230  0.0581259.3572
+332.1448  0.0758262.4046
+306.3785  0.0382289.3956
+318.4947  0.0121277.4511
+327.9429  0.0654270.1060
+362.9078  0.0746291.5341
+367.7780  0.0461255.8875
+314.6743  0.0527276.2378
+368.5212  0.0508272.3141
+357.4115  0.0249282.9901
+323.6021  0.0369286.6521
+339.2889  0.0197264.8191
+
+ Initial output data matrix:
+      f1      f2      f3
+ -0.0010 -0.6709  0.6541
+ -0.0011 -0.4174  1.0801
+ -0.0007 -0.6450  0.6207
+ -0.0009 -0.4205  1.7995
+ -0.0008 -0.4839  1.9084
+ -0.0007 -0.4391  0.0832
+ -0.0010 -0.6905  0.2319
+ -0.0008 -0.5806  1.0299
+ -0.0008 -0.6408  4.2789
+ -0.0011 -0.3639  1.9651
+ -0.0007 -0.7020  0.3684
+ -0.0010 -0.5026  2.1966
+ -0.0010 -0.6161  1.1564
+ -0.0008 -0.7547  0.3697
+ -0.0010 -0.5356  0.6803
+
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Algorithm iteration 1 
+
+ Predicted hypervolume improvement:    4.8699
+ Time taken:    8.7083 
+
+ Proposed evaluation point(s): 
+      x1      x2      x3
+337.3049  0.0126280.2982
+
+ Corresponding observation(s): 
+      f1      f2      f3
+ -0.0010 -0.6718  0.5150
+
+ Current hyperparameter values: 
+  Hyperparameter      f1      f2      f3
+         lambda1  0.0479  0.0067  0.0257
+         lambda2 31.3309 96.4390 24.9058
+         lambda3  0.0861  0.0132  0.3539
+          sigmaf  0.0002  0.1205  1.3995
+          sigman  0.0000  0.0003  0.0026
+
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Algorithm iteration 2 
+
+ Predicted hypervolume improvement:    8.6693
+ Time taken:    6.8120 
+
+ Proposed evaluation point(s): 
+      x1      x2      x3
+327.5287  0.0122258.8705
+
+ Corresponding observation(s): 
+      f1      f2      f3
+ -0.0011 -0.5178  0.5129
+
+ Current hyperparameter values: 
+  Hyperparameter      f1      f2      f3
+         lambda1  0.0524  0.0075  0.0286
+         lambda2 33.6038104.5197 27.0965
+         lambda3  0.0918  0.0143  0.3677
+          sigmaf  0.0002  0.1188  1.4089
+          sigman  0.0000  0.0003  0.0026
+
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Algorithm iteration 3 
+
+ Predicted hypervolume improvement:    3.7537
+ Time taken:    7.4369 
+
+ Proposed evaluation point(s): 
+      x1      x2      x3
+330.3343  0.0121284.8326
+
+ Corresponding observation(s): 
+      f1      f2      f3
+ -0.0010 -0.6909  0.3797
+
+ Current hyperparameter values: 
+  Hyperparameter      f1      f2      f3
+         lambda1  0.0600  0.0075  0.0307
+         lambda2 36.3595120.0206 27.8022
+         lambda3  0.1004  0.0149  0.4604
+          sigmaf  0.0002  0.1195  1.4123
+          sigman  0.0000  0.0003  0.0025
+
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯

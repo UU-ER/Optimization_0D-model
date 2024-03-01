@@ -1,0 +1,78 @@
+
+clear all
+close all
+rng(1,'twister')
+
+%% GET ISOTHERM PARAMETERS
+sorbent_data_new = false;
+    if sorbent_data_new
+        sorbent_data;
+        save('data','data')
+    else 
+        load('data','data')
+    end
+    
+        % define input data
+        data.process.Tamb = Tamb; % ambient temperature 
+        data.process.Tdes = Tdes; % desoprtion temperature, needs to be higher than 
+        data.process.pamb = 1.001*1e5*1e-6; % total pressure, bar->Pa->MPa
+        data.process.pvac = pvac*1e5*1e-6; % vacuum pressure, bar->Pa->MPa
+
+        %% call model
+        [Q_spec, E_spec, Pr, purity, purity_dry, recovery, WC] = run_0D_model(data);
+
+% chose sorbent
+    m = 1;
+    data.currentSorbent = m; % 1: ex, 2: CW, 3: MIL, rest: 4-79
+    name_sorbent = data.sorbent(m).name;
+    
+    
+%% optimize multi objective: Productivity and energy
+Tdes = 373;
+pvac = 0.27;
+
+
+
+fitness = @multi_objective_function;
+nvar = 1;
+[x,fval] = gamultiobj(fitness,nvar);
+
+%% check
+x0 = -10:0.5:10;
+f1 = (x0+2).^2 - 10;
+f2 = (x0-2).^2 + 20;
+figure; hold on
+plot(x0,f1);
+plot(x0,f2);
+grid;
+xlabel('x')
+ylabel('f')
+
+
+% plot results
+plot(x,fval(:,1),'x');
+plot(x,fval(:,2),'o');
+
+% plot pareto
+figure;
+plot(fval(:,1),fval(:,2),'o')
+xlabel('f1')
+ylabel('f2')
+grid;
+
+% SchafferNo2(2);
+% options = gaoptimset; % default
+% options = gaoptimset(options,'PlotFcn',[@gaplotpareto]);
+% [x,fval] = gamultiobj(@SchafferNo2,1,[],[],[],[],-1e5,1e5,[],options);
+% [sorted,loc] = sort(fval(:,1));
+% plot(sorted,fval(loc,2),'-bo');
+% 
+% 
+% function out = SchafferNo2(X)
+%     x = X(:,1);
+%     out(1) = x.^2;
+%     out(2) = (x-2).^2;
+% 
+% end
+
+

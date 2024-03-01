@@ -1,0 +1,15 @@
+function E_Ref = W_Refrig(Tamb,Tads,Nin) 
+%%% Calculates the work needed for a refrigeration system to cool down the
+% inlet ambient air to subambient temperatures
+
+Cp= 0.02914; % Air Isobaric specific heat (KJ/mol/k)
+dTmin=10; % minimum delta T between the ambient Temperature and the Depleted Air
+T3=Tamb-dTmin; %Depleted Air T 
+T1=Tamb+Tads-T3; 
+Th=Tamb+5; % +dT min Condensor =5C
+Tc=Tads-5; % -dT min Evaporator =5C
+COP_Carnot_Ref=1/((Th/Tc)-1);
+COP_Real=0.7*COP_Carnot_Ref; % second law efficiency
+Q_Ref=Nin*Cp*(T1-Tads);
+E_Ref=Q_Ref/COP_Real; % KJ
+end
