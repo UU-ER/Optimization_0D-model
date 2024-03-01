@@ -1,5 +1,5 @@
 # Project title:
-Process-based Optimization using 0D model
+Process-based optimization for material screening using 0D model
 # Motivation: 
 This algorithm uses process-based optimization approach to screen the materials from large database. 
 The process is a Vacuum Temperature Swing Adsorption (VTSA) cycle which is modeled by equilibrium assumption (0D)
